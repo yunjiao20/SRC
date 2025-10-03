@@ -8,7 +8,10 @@ src/SRC-GUI/SRC-GUI.exe <br>
 src/SRC-GUIlit/SRCGUIlit.exe* <br>
 源码与程序放在一处 <br>
 <br>
-SRC需要文件src/src-config/student_names.txt进行配置，如您需要使用SRC，您最好克隆下所有文件
+SRC需要文件src/src-config/student_names.txt进行配置，如您需要使用SRC，您最好克隆下所有文件<br>
+<br>
+值得一提的是，这个程序是相对臃肿且简陋的，因为希望可以拓展一些seewo上没有或不好下载的功能，SRC提供了一些并不必要的
+功能。如果您需要用于一些严肃的环境中，你有其它更好的选择
 
 ## SRC文档
 SRC提供了比此更详细的静态HTML文档，位与 src/docs/ 下。这将为你的配置、使用、错误处理提供方便，
