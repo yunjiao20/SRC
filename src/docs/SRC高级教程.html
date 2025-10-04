@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRC高级教程</title>
+</head>
+<body>
+    <h1>SRC高级功能</h1>
+    <p>作为一个抽取学生姓名的程序，以下功能显得不必要。这是为了希望在seewo上可以使用Python的一些功能而作的拓展</p>
+
+    <h2>mode> eval</h2>
+    <p>使用 print(eval(input('eval> '))) 处理，解析Python表达式，用于进行一些数学运算和单行Python代码注入</p>
+
+    <h2>mode> exec</h2>
+    <p>接受多行输入，并作为Python代码运行。您可查看源代码以临时自定义功能</p>
+
+    <h2>mode> run</h2>
+    <p>将文件作为Python文件读取执行，运行一些简单的Python代码，此功能为试行，未知其可靠性</p>
+
+    <h2>接受参数</h2>
+    <p>SRC可以接受参数，并将最后一个参数当作文件名，尝试将此文件当作Python文件运行</p>
+
+    <h1>SRC再编译</h1>
+    <p>
+        SRC是使用python3.12.4编写及此版本下的pyinstaller编译而成，SRC和SRC-GUI的源代码是完全一样的，
+        他们只有优先运行文件的区别。编译random_choice.py即为SRC，编译gui.py即为SRC-GUI
+        <code>
+            <div id="powershell">pyinstaller -F -n SRC src/SRC/random_choice.py</div>
+        </code>
+        就先写到这里吧，累死了...
+    </p>
+</body>
+</html>
