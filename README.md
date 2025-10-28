@@ -1,6 +1,6 @@
 # SRC
 Student Random Choice 学生姓名随机抽取程序<br>
-这是一个适用于seewo的随机抽取学生姓名的程序，使用Python3.12.4编写，pyinstaller编译<br>
+这是一个适用于seewo的随机抽取学生姓名的程序，最新版使用Python3.14.0编写，pyinstaller编译<br>
 <br>
 提供的程序为：<br>
 *src/SRC/SRC.exe <br>
