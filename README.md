@@ -6,7 +6,7 @@ Student Random Choice 学生姓名随机抽取程序<br>
 *src/SRC/SRC.exe <br>
 src/SRC-GUI/SRC-GUI.exe <br>
 src/SRC-GUIlit/SRCGUIlit.exe* <br>
-源码与放在 *src/source/* 处 <br>
+源码放在 *src/source/* 处 <br>
 <br>
 SRC需要文件src/src-config/student_names.txt进行配置，如您需要使用SRC，您最好克隆下所有文件<br>
 <br>
