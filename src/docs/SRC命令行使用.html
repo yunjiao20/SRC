@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRC command-line</title>
+</head>
+<body>
+    <h1>SRC命令行基础使用</h1>
+    <p>运行src/SRC/SRC.exe，打开SRC command-line，你将看到以下输出</p>
+    <img src="SRC_command_line.png" alt="SRC命令行输出：一个大的SRC和一些帮助信息">
+    <h2>mode> h</h2>
+    <p>
+        当你的输入不属于帮助信息中的任何一条时，SRC返回提示信息
+        <code>
+            <strong>
+                <hr>
+                mode> sm <br>
+                !!!ERROR INPUT!!!  "sm" not a legal command, pleas input "h" to watch help message <br>
+                !!!错误输入!!!  "sm"不是合法指令，请输入"h"以查看帮助信息<br>
+                mode> <br>
+                <hr>
+            </strong>
+        </code>
+        这提醒你输入 h 查看帮助信息
+        <code>
+            <strong>
+                <hr>
+                mode> h <br>
+                <br>
+                1  --随机抽取学生姓名<br>
+                2  --不放回随机抽取学生姓名<br>
+                3  --随机抽学号<br>
+                q  --终止程序<br>
+                <br>
+                docs    --打开SRC的HTML文档<br>
+                paddr   --打开项目地址<br>
+                gui     --打开图形化界面<br>
+                guilit  --打开guilit，一个轻量化的SRC-GUI <br>
+                <br>
+                eval  --执行Python表达式，用于进行简单的数学计算和单行Python代码注入<br>
+                exec  --多行Python代码注入<br>
+                run   --运行Py文件<br>
+                <br>
+                mode>  
+                <hr>
+            </strong>
+        </code>
+    </p>
+
+    <h2>mode> 1</h2>
+    <p>
+        随机抽取学生姓名，这将可能返回重复的学生姓名
+        <code>
+            <strong>
+<hr>
+mode> 1 <br>
+随机有放回抽取，这可能会返回重复的学生名，输入“q”终止<br>
+"q"终止> <br>
+小明 <br>
+<br>
+"q"终止> q <br>
+mode>
+                <hr>
+            </strong>
+        </code>
+    </p>
+
+    <h2>mode> 2</h2>
+    <p>
+        不放回随机抽取
+        <code>
+            <strong>
+            <hr>
+mode> 2 <br>
+不放回随机抽取，前缀为剩余的学生数量，输入数字进行多次抽取，“q”终止<br>
+6> <br>
+小红<br>
+<br>
+5> <br>
+小明 <br>
+<br>
+4> 3 <br>
+小军<br>
+小丽<br>
+小李<br>
+<br>
+1> q <br>
+mode>
+            <hr>
+            </strong>
+        </code>
+    </p>
+
+    <h2>mode> 3</h2>
+    <p>随机抽学号，可能抽到重复的学号，范围为 randint(1, len(stu_names))</p>
+
+    <h2>mode> docs</h2>
+    <p>使用默认浏览器打开SRC的静态HTML文档，这将会打开 src/docs/SRC基本配置和使用.html</p>
+
+    <h2>mode> paddr</h2>
+    <p>打开SRC的项目地址：<a href="https://www.github.com/yunjiao20/SRC">https://www.github.com/yunjiao20/SRC</a></p>
+
+    <h2>mode> gui</h2>
+    <p>打开SRC-GUI界面，SRC自带SRC-GUI，他们共用相同的Python源码</p>
+
+    <h3>mode> guilit</h3>
+    <p>打开SRC-GUIlit，这实际上运行文件 src/SRC-GUIlit/SRCGUIlit.exe ,这是一个轻量化的SRC-GUI，但他
+        并不内置在SRC中，启动它将会启动一个新的进程，这可能会花费更长时间
+    </p>
+
+    <h2>其余功能请查阅<a href="SRC高级教程.html">SRC高级教程</a></h2>
+</body>
+</html>
