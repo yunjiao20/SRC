@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRC配置与使用</title>
+</head>
+<body>
+    <h1>SRC基本配置与使用</h1>
+    <p>SRC（Student Random Choice）是一个用于随机抽取学生姓名的程序，提供了随机抽取及一些高级功能</p>
+    <br>
+    <p>其他文档：</p>
+    <a href="SRC问题排查.html">SRC问题排查</a><br>
+    <a href="SRC命令行使用.html">SRC命令行使用</a><br>
+    <a href="SRC高级教程.html">SRC高级功能</a><br>
+    <br>
+    <a href="https://github.com/yunjiao20/SRC">SRC GitHub 项目地址</a>
+    
+    <h2>SRC配置</h2>
+    <p>
+        如您是第一次使用SRC，SRC可能会返回 NullStudentNemesList 错误，这是因为你没有向SRC提供学生姓名<br>
+        SRC将会从 src/src-config/student_names.txt 中读取学生姓名，你应该在编辑此文件以提供它<br>
+    </p>
+    <p>打开此文件，你将会看到以下提示信息</p><br>
+    <img src="file_student_names_image.png" alt="ImageNotFoundError,Please open src/docs/file_student_names_image youself">
+    <br><p>
+        不必担心提示信息会对学生姓名的读取尝试影响，以 # 开头的行（必须是第一个字符）将会被SRC忽略<br>
+        正如提示信息所提示的，SRC以空格和换行分隔学生姓名，这因为着你可以提供如下的信息：
+        <strong>
+            <hr>
+            小明<br>
+            小丽<br>
+            小美<br>
+            小军<br>
+            小红
+            <hr>
+        </strong>
+        你可以使用 # 暂时注释掉某个名字<br>
+        你也可以使用：
+        <strong>
+            <hr>
+            小明  小丽  小美  小军<br>
+            小红  小庄  小马  小绿
+            <hr>
+        </strong>
+        提供学生信息，你可以使用任意数量的空格分隔学生姓名
+    </p>
+
+    <h2>SRC使用</h2>
+    <p>
+        src中提供了3个版本的exe可执行文件，分别是src/SRC/SRC.exe，src/SRC-GUI/SRC-GUI.exe，
+        src/SRC-GUIlit/SRCGUIlit.exe，你应自行为其创建快捷方式
+    </p>
+    <h3>SRC-GUI</h3>
+    <p>src/SRC-GUI/SRC-GUI.exe <br>SRC的GUI界面，允许你打开命令行、打开文档、随机不放回抽取学生姓名</p>
+    <img src="SRC-GUI_main_window.png" alt="SRC-GUI的主界面，提供了4个按钮">
+    <img src="SRC-GUI_choice_window.png" alt="SRC-GUI的抽取界面">
+    <h3>SRC-GUIlit</h3>
+    <p>src/SRC-GUIlit/SRCGUIlit.exe <br>轻量化的GUI界面，没有SRC-GUI的主界面和所有命令行功能，界面如SRC-GUI的抽取界面</p>
+    <h3>SRC command-line</h3>
+    <p>src/SRC/SRC.exe <br>SRC的命令行界面，提供了GUI界面的一切功能，同时提供了一些高级功能<a href="SRC命令行使用.html">SRC command-line文档</a></p>
+
+</body>
+</html>
