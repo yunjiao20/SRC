@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRC配置与使用</title>
+</head>
+<body>
+    <h1>SRC基本配置与使用</h1>
+    <p>SRC（Student Random Choice）是一个用于随机抽取学生姓名的程序，提供了随机抽取及一些高级功能</p>
+    <br>
+    <p>其他文档：</p>
+    <a href="SRC问题排查.html">SRC问题排查</a><br>
+    <a href="SRC命令行使用.html">SRC命令行使用</a><br>
+    <a href="SRC高级教程.html">SRC高级功能</a><br>
+    <br>
+    <a href="https://github.com/yunjiao20/SRC">SRC GitHub 项目地址</a>
+    
+    <h2>SRC配置</h2>
+    <p>
+        如您是第一次使用SRC，SRC可能会返回 NullStudentNemesList 错误，这是因为你没有向SRC提供学生姓名<br>
+        SRC将会从 src/src-config/student_names.txt 中读取学生姓名，你应该在编辑此文件以提供它<br>
+    </p>
+    <p>打开此文件，你将会看到以下提示信息</p><br>
+    <img src="file_student_names_image.png" alt="ImageNotFoundError,Please open src/docs/file_student_names_image youself">
+    <br><p>
+        不必担心提示信息会对学生姓名的读取尝试影响，以 # 开头的行（必须是第一个字符）将会被SRC忽略，
+        你可以使用 # 暂时注释掉某个名字。<br>
+        正如提示信息所提示的，SRC以空格和换行分隔学生姓名，此处不再赘述<br>
+        值得一提的时，如果你使用Windows notepad（记事本）等编辑器编辑此文件并保存，可能会使一个不可见的数据插入到文件中，
+        导致文件第一行的 # 失效，此行提示信息被当作姓名处理
+        </p>
+
+    <h2>SRC使用</h2>
+    <p>
+        src中提供了3个版本的exe可执行文件，分别是src/SRC/SRC.exe，src/SRC-GUI/SRC-GUI.exe，
+        src/SRC-GUIlit/SRCGUIlit.exe，你应自行为其创建快捷方式
+    </p>
+    <h3>SRC-GUI</h3>
+    <p>src/SRC-GUI/SRC-GUI.exe <br>SRC的GUI界面，允许你打开命令行、打开文档、随机不放回抽取学生姓名</p>
+    <img src="SRC-GUI_main_window.png" alt="SRC-GUI的主界面，提供了4个按钮">
+    <img src="SRC-GUI_choice_window.png" alt="SRC-GUI的抽取界面">
+    <p>在2025.11.13的更新中，新增了一个按钮，打开SRC GitHub上的项目地址，方便你下载更新的版本</p>
+    <h3>SRC-GUIlit</h3>
+    <p>src/SRC-GUIlit/SRCGUIlit.exe <br>轻量化的GUI界面，没有SRC-GUI的主界面和所有命令行功能，界面如SRC-GUI的抽取界面</p>
+    <h3>SRC command-line</h3>
+    <p>src/SRC/SRC.exe <br>SRC的命令行界面，提供了GUI界面的一切功能，同时提供了一些高级功能，请查看<a href="SRC命令行使用.html">SRC command-line文档</a></p>
+
+    <h2>SRC记忆功能</h2>
+    <p>
+        在2025.10.28的更新中，默认在随机不放回抽取时减去上次抽取的姓名，以实现记住你上次抽取剩下姓名的功能。如你需要重新抽取，
+        你可以：<br>
+        手动清空文件<strong>src/src-history/last_chioced_names.txt</strong>，里面保存了你上次抽取的姓名，下次抽取时将会减去其中的姓名。
+        清空文件，下次打开将重新开始抽取<br>
+        修改<strong>src/src-config/student_names.txt</strong>，当SRC发现此文件遭到有效更改时，将会清空副本和上次抽取姓名，重新抽取。
+        这里只是提醒你修改你提供的学生信息会使SRC重新抽取
+    </p>
+
+    <h2>SRC日志</h2>
+    <p>在2025.11.13的更新中，新增了日志文件<strong>src/src-history/src-log.txt</strong>，这里面保存了SRC每次打开的时间、抽取姓名、
+    修改副本和已抽取姓名文件的行为</p>
+</body>
+</html>

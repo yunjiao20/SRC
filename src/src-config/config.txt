@@ -1,0 +1,20 @@
+#在最新的SRC中，抛弃了多版本附带，而是只存在一个可执行程序SRC.exe
+#此版本SRC使用此文件进行原SRC、SRC-GUI、SRC-GUIlit的选择与运行
+
+
+
+#StartMode标志了打开的模式，如你没有提供它，则SRC默认打开command-line。
+#commandline--SRC命令行
+#mainGUI--GUI主界面
+#choiceGUI--直接打开随机抽取界面
+
+#StartMode commandline
+StartMode mainGUI
+#StartMode choiceGUI
+
+
+
+#用于设置SRC的种子，我并不建议你设置它，因为这可能导致每次重新抽取是都抽到
+#一样的学生姓名。如你没有设置种子，将默认将打开SRC的时间戳作为算法的种子
+
+#Seed 12345
